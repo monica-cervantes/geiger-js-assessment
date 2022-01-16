@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"> 
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="format-detection" content="telephone=no">
+
+	<title>Form Example</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			height: 100%;
+    	width: 100%;
+		}
+
+		body{
+			position: relative;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+		}
+		
+		.bg-holder {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+
+			background-image: url("bg.jpg");
+			background-position: center;
+			background-size: cover;
+	
+			filter: blur(5px);
+			-webkit-filter: blur(5px);
+		}
+
+		#content{
+			margin: 30px 50px;
+			max-width: 1020px;
+			min-height: 562.81px;
+			
+			background-color: rgb(255, 255, 255, .53);
+			border-radius: 13px;
+			box-shadow: 0 0 8px rgba(147, 144, 144, .75);
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.col {
+			flex: 0 0 50%;
+			padding: 30px;
+			width: 50%;
+		}
+
+		.col:last-child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			background-color: #fff;
+			border-top-right-radius: 13px;
+    	border-bottom-right-radius: 13px;
+		}
+
+		@media only screen and (max-width: 575px) {
+			body {
+				display: inline-block;
+			}
+
+			#content {
+				margin: 0;
+
+				border-radius: 0;
+			}
+
+			.col {
+				flex: 0 0 100%;
+				width: 100%;
+			}
+
+			.col:last-child {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bg-holder"></div>
+	<div id="content" class="row">
+		<div class="col">
+			<h1>Welcome to the jQuery assessment</h1>
+			<p> We use jQuery to validate that form fields have been filed in. We also use it to “replace” a text field with a drop down of pre-defined choices. </p>
+			<p>For this assessment, add jQuery to validate that the first 2 questions have answers when the submit button is pressed. If not, provide an error message.</p> 
+			<p>In addition, please use jQuery to “replace” the input box on question 3 with a drop down containing these 4 possible answers:
+				<ul>
+					<li>Star Wars</li>
+					<li>Lord of the Rings</li>
+					<li>Harry Potter</li>
+					<li>Hunger Games</li>
+				</ul>
+			</p>
+		</div>
+
+		<div class="col">
+			<h2>Thank you for submitting the form!</h2>
+		</div>
+	</div>
+</body>
+</html>
